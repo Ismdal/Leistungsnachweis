@@ -1,0 +1,27 @@
+body {
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    color: white;
+    min-height: 100vh;
+    
+    margin: 0;
+    padding: 0;
+}
+
+/* Book Component Stuff */
+.book-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 1rem; /* Spacing between cards */
+    justify-content: center;
+    margin: 1rem;
+}
+
+/*Button Stuff*/
+.btn-primary {
+    --bs-btn-bg: rgb(255, 140, 0);
+    --bs-btn-border-color: rgb(255, 140, 0);
+    --bs-btn-hover-bg: rgb(255, 200, 0);
+    --bs-btn-hover-border-color: #rgb(255, 200, 0);
+    --bs-btn-active-bg: rgb(216, 115, 0);
+    --bs-btn-active-border-color: rgb(216, 115, 0);
+}
