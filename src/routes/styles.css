@@ -16,3 +16,25 @@ body {
     --bs-btn-active-bg: rgb(216, 115, 0);
     --bs-btn-active-border-color: rgb(216, 115, 0);
 }
+.btn-success{
+    --bs-btn-bg:  rgb(98, 137, 98);
+    --bs-btn-border-color: rgb(98, 137, 98);
+    --bs-btn-hover-bg: rgb(55, 158, 55);
+    --bs-btn-hover-border-color: rgb(55, 158, 55);
+    --bs-btn-active-bg: rgb(0, 100, 0);
+    --bs-btn-active-border-color: rgb(0, 100, 0);
+}
+.btn-danger{
+    --bs-btn-bg:  rgb(202, 61, 61);
+    --bs-btn-border-color: rgb(202, 61, 61);
+    --bs-btn-hover-bg: rgb(200, 0, 0);
+    --bs-btn-hover-border-color: rgb(200, 0, 0);
+    --bs-btn-active-bg: rgb(100, 0, 0);
+    --bs-btn-active-border-color: rgb(100, 0, 0);
+}
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}

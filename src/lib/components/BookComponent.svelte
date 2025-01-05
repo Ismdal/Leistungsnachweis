@@ -17,12 +17,12 @@
                         {#if book.collection}
                             <form method="POST" action="?/removeFromCollection">
                                 <input type="hidden" name="id" value={book._id} />
-                                <button class="btn btn-light">Von Sammlung entfernen</button>
+                                <button class="btn btn-danger">Von Sammlung entfernen</button>
                             </form>
                         {:else}
                             <form method="POST" action="?/addToCollection">
                                 <input type="hidden" name="id" value={book._id} />
-                                <button class="btn btn-light">In meine Sammlung hinzufügen</button>
+                                <button class="btn btn-success">In meine Sammlung hinzufügen</button>
                             </form>
                         {/if}
                     </div>

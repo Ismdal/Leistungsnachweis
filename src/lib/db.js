@@ -31,7 +31,6 @@ async function getBooks() {
   return books;
 }
 
-//not needed anymore//
 async function getCollection(filter = {}) {
   const collection = db.collection('books');
   return await collection.find(filter).toArray();

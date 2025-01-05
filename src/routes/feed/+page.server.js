@@ -6,3 +6,11 @@ export async function load() {
     comments: await db.getComments()
   }
 }
+export const actions = {
+delete: async ({ request }) => {
+    const data = await request.formData();
+
+    await db.deleteComment(data.get("id"));
+    return {success: true}
+  },
+};
