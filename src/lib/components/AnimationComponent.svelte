@@ -36,7 +36,7 @@
     .book:nth-child(1) {
         animation-delay: 0s;
         margin-left: -200px;
-        background-image: url("/images/image16.png");
+        background-image: url("/images/image16.jpg");
     }
     .book:nth-child(2) {
         animation-delay: 0.5s;

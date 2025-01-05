@@ -14,6 +14,6 @@
   {#if books.length > 0}
     <BookComponent books={books} />
   {:else}
-    <p>Es befinden sich noch keine Bücher in deiner Sammlung.</p>
+  <p class="mx-5 px-5">Es befinden sich noch keine Bücher in deiner Sammlung.</p>
   {/if}
 </div>

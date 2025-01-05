@@ -31,7 +31,8 @@ async function getBooks() {
   return books;
 }
 
-async function getCollextion(filter = {}) {
+//not needed anymore//
+async function getCollection(filter = {}) {
   const collection = db.collection('books');
   return await collection.find(filter).toArray();
 }
@@ -57,7 +58,6 @@ async function getBook(id) {
 
 async function createBook(book) {
   book.image = "/images/placeholder.jpg"; // default poster
-  book.author = [];
   try {
     const collection = db.collection("books");
     const result = await collection.insertOne(book);

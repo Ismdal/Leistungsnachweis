@@ -7,15 +7,6 @@ body {
     padding: 0;
 }
 
-/* Book Component Stuff */
-.book-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    gap: 1rem; /* Spacing between cards */
-    justify-content: center;
-    margin: 1rem;
-}
-
 /*Button Stuff*/
 .btn-primary {
     --bs-btn-bg: rgb(255, 140, 0);
