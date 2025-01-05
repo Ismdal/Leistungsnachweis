@@ -1,8 +1,8 @@
 <script>
-  import CommentComponent from '$lib/components/CommentComponent.svelte';
+  import CommentComponent from "$lib/components/CommentComponent.svelte";
 
   let { data, form } = $props();
-  let newComment = $state('');
+  let newComment = $state("");
 </script>
 
 <a href="/books" class="btn btn-secondary mb-4 mt-4">Zurück</a>
@@ -13,18 +13,17 @@
     <p><strong>Author:</strong> {data.book.author}</p>
     <p><strong>Description:</strong> {data.book.description}</p>
     <img src={data.book.image} alt={data.book.title} class="book-image mb-4" />
-    
   </div>
 
   <div class="col-md-6">
     <h2>Kommentare</h2>
     <div>
       {#each data.comments as comment}
-        <CommentComponent comment={comment} />
+        <CommentComponent {comment} />
       {/each}
     </div>
     <form class="mt-3" method="POST" action="?/update">
-      <input type="hidden" name="id" value="{data.book._id}" />
+      <input type="hidden" name="id" value={data.book._id} />
       <textarea
         class="form-control"
         name="comment"
@@ -35,8 +34,10 @@
         rows="3"
         required
       ></textarea>
-      <button class="btn btn-primary mt-3" type="submit">Kommentar hinzufügen</button>
-    </form> 
+      <button class="btn btn-primary mt-3" type="submit"
+        >Kommentar hinzufügen</button
+      >
+    </form>
   </div>
 </div>
 

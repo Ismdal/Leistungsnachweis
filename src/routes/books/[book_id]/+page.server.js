@@ -23,5 +23,11 @@ export const actions = {
 
     await db.createComment(bookId, comment);
     return {success: true};
-  }
+  },
+  delete: async ({ request }) => {
+    const data = await request.formData();
+
+    await db.deleteComment(data.get("id"));
+    return {success: true}
+  },
 };

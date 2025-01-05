@@ -57,7 +57,7 @@ async function getBook(id) {
 }
 
 async function createBook(book) {
-  book.image = "/images/placeholder.jpg"; // default poster
+  book.image = "/images/placeholder.png"; // default poster
   try {
     const collection = db.collection("books");
     const result = await collection.insertOne(book);
@@ -80,24 +80,6 @@ async function updateBook(book) {
       console.log("No book with id " + id);
     } else {
       console.log("book with id " + id + " has been updated.");
-      return id;
-    }
-  } catch (error) {
-    console.log(error.message);
-  }
-  return null;
-}
-
-async function deleteBook(id) {
-  try {
-    const collection = db.collection("books");
-    const query = { _id: new ObjectId(id) }; // filter by id
-    const result = await collection.deleteOne(query);
-
-    if (result.deletedCount === 0) {
-      console.log("No book with id " + id);
-    } else {
-      console.log("book with id " + id + " has been successfully deleted.");
       return id;
     }
   } catch (error) {
@@ -145,6 +127,23 @@ async function createComment(bookId, comment) {
   }
 }
 
+async function deleteComment(id) {
+  try {
+    const collection = db.collection("comments");
+    const query = { _id: new ObjectId(id) }; // filter by id
+    const result = await collection.deleteOne(query);
+
+    if (result.deletedCount === 0) {
+      console.log("No comment with id " + id);
+    } else {
+      console.log("Comment with id " + id + " has been successfully deleted.");
+      return id;
+    }
+  } catch (error) {
+    console.log(error.message);
+  }
+  return null;
+}
 
 // export all functions so that they can be used in other files
 export default {
@@ -152,6 +151,7 @@ export default {
   getBook,
   createBook,
   updateBook,
+  deleteComment,
   getComments,
   getCommentsForBook,
   createComment,

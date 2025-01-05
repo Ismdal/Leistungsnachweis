@@ -8,10 +8,14 @@
     <p class="lead mt-3">
         Teile deine Meinung zu unserer Sammlung von Büchern!
     </p>
+    <a href="/books/create" class="btn btn-primary">
+        Neues Buch hinzufügen
+    </a>
 </div>
 
-<BookComponent books = {data.books} />
-
-<div class="mx-5 px-5">
-    <a href="/books/create" class="btn btn-primary">Neues Buch hinzufügen</a>
+<div class="container mt-4">
+    <div class="row">
+        <BookComponent books={data.books} />
+    </div>
 </div>
+
