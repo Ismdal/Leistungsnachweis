@@ -11,3 +11,7 @@
 </div>
 
 <BookComponent books = {data.books} />
+
+<div>
+    <a href="/books/create" class="btn btn-primary">Neues Buch hinzufügen</a>
+</div>

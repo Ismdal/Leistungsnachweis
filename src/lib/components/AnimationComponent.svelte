@@ -36,27 +36,27 @@
     .book:nth-child(1) {
         animation-delay: 0s;
         margin-left: -200px;
-        background-image: url("/images/image1.png");
+        background-image: url("/images/image16.png");
     }
     .book:nth-child(2) {
         animation-delay: 0.5s;
         margin-left: -100px;
-        background-image: url("/images/image2.png");
+        background-image: url("/images/homepage.png");
     }
     .book:nth-child(3) {
         animation-delay: 1s;
         margin-left: 0px;
-        background-image: url("/images/image3.png");
+        background-image: url("/images/image14.png");
     }
     .book:nth-child(4) {
         animation-delay: 1.5s;
         margin-left: 100px;
-        background-image: url("/images/image12.png");
+        background-image: url("/images/image13.png");
     }
     .book:nth-child(5) {
         animation-delay: 2s;
         margin-left: 200px;
-        background-image: url("/images/homepage.png");
+        background-image: url("/images/image15.png");
     }
 
     /* Styling for the animation container */

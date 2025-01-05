@@ -27,7 +27,6 @@ async function getBooks() {
     });
   } catch (error) {
     console.log(error);
-    // TODO: errorhandling
   }
   return books;
 }
@@ -47,12 +46,10 @@ async function getBook(id) {
 
     if (!book) {
       console.log("No book with id " + id);
-      // TODO: errorhandling
     } else {
       book._id = book._id.toString(); // convert ObjectId to String
     }
   } catch (error) {
-    // TODO: errorhandling
     console.log(error.message);
   }
   return book;
@@ -61,13 +58,11 @@ async function getBook(id) {
 async function createBook(book) {
   book.image = "/images/placeholder.jpg"; // default poster
   book.author = [];
-  //movie.watchlist = false;
   try {
     const collection = db.collection("books");
     const result = await collection.insertOne(book);
     return result.insertedId.toString(); // convert ObjectId to String
   } catch (error) {
-    // TODO: errorhandling
     console.log(error.message);
   }
   return null;
@@ -106,7 +101,6 @@ async function deleteBook(id) {
       return id;
     }
   } catch (error) {
-    // TODO: errorhandling
     console.log(error.message);
   }
   return null;
@@ -156,6 +150,7 @@ async function createComment(bookId, comment) {
 export default {
   getBooks,
   getBook,
+  createBook,
   updateBook,
   getComments,
   getCommentsForBook,
