@@ -31,10 +31,10 @@ async function getBooks() {
   return books;
 }
 
-async function getCollection(filter = {}) {
-  const collection = db.collection('books');
-  return await collection.find(filter).toArray();
-}
+//async function getCollection(filter = {}) {
+//  const collection = db.collection('books');
+//  return await collection.find(filter).toArray();
+//}
 
 // Get book by id
 async function getBook(id) {
