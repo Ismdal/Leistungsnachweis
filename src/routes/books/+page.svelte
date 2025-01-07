@@ -1,6 +1,6 @@
 <script>
-    let { data } = $props();
     import BookComponent from "$lib/components/BookComponent.svelte";
+    let { data } = $props();
 </script>
 
 <div class="container text-center mt-5">
@@ -8,9 +8,7 @@
     <p class="lead mt-3">
         Teile deine Meinung zu unserer Sammlung von Büchern!
     </p>
-    <a href="/books/create" class="btn btn-primary">
-        Neues Buch hinzufügen
-    </a>
+    <a href="/books/create" class="btn btn-primary"> Neues Buch hinzufügen </a>
 </div>
 
 <div class="container mt-4">
@@ -18,4 +16,3 @@
         <BookComponent books={data.books} />
     </div>
 </div>
-
